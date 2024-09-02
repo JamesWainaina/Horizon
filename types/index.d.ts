@@ -8,14 +8,14 @@ declare type SearchParamProps = {
 // ========================================
 
 declare type SignUpParams = {
-  firstName?: string;
-  lastName?: string;
-  address1?: string;
-  city?: string;
-  state?: string;
-  postalCode?: string;
-  dateOfBirth?: string;
-  ssn?: string;
+  firstName: string;
+  lastName: string;
+  address1: string;
+  city: string;
+  state: string;
+  postalCode: string;
+  dateOfBirth: string;
+  ssn: string;
   email: string;
   password: string;
 };
@@ -60,7 +60,7 @@ declare type Account = {
   type: string;
   subtype: string;
   appwriteItemId: string;
-  shareableId: string;
+  sharableId: string;
 };
 
 declare type Transaction = {
@@ -89,7 +89,7 @@ declare type Bank = {
   accessToken: string;
   fundingSourceUrl: string;
   userId: string;
-  shareableId: string;
+  sharableId: string;
 };
 
 declare type AccountTypes =
@@ -211,7 +211,7 @@ declare interface TotalBalanceBoxProps {
 
 declare interface FooterProps {
   user: User;
-  type?: 'mobile' | 'desktop'
+  type?: "mobile" | "desktop";
 }
 
 declare interface RightSidebarProps {

@@ -15,7 +15,6 @@ export default function RootLayout({
         alt="Auth image" width={500} 
         height={500}/>
 
-        
       </div>
     </main>
   );
