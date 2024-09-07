@@ -14,7 +14,7 @@ import {
 const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
   const router = useRouter();
 
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState('');
 
   useEffect(() => {
     const getLinkToken = async () => {
@@ -38,6 +38,7 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
     [user]
   );
 
+  // first create a plaid link configuration object
   const config: PlaidLinkOptions = {
     token,
     onSuccess,

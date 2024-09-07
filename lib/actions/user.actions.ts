@@ -12,7 +12,7 @@ import { addFundingSource, createDwollaCustomer } from "./dwolla.actions";
  const {
    APPWRITE_DATABASE_ID: DATABASE_ID,
    APPWRITE_USER_COLLECTION_ID: USER_COLLECTION_ID,
-   APPWRITE_BNNK_COLLECTION_ID: BANK_COLLECTION_ID,
+   APPWRITE_BANK_COLLECTION_ID: BANK_COLLECTION_ID,
  } = process.env;
 
 export const signIn = async ({ email, password }: signInProps) => {
@@ -123,41 +123,11 @@ export const createLinkToken = async (user: User) => {
     return parseStringify({ linkToken: response.data.link_token });
   } catch (error) {
     console.error(
-      "An error occurred while creating a new Horizon user:",
+      "An error occurred while creating a new Token:",
       error
     );
   }
 };
-
-
-export const createBankAccount = async ({
-  userId,
-  bankId,
-  accountId,
-  accessToken,
-  fundingSourceUrl,
-  shareableId,
-}: createBankAccountProps) => {
-  try {
-    const { database } = await createAdminClient();
-
-    const bankAccount = await database.createDocument(
-      DATABASE_ID!,
-      BANK_COLLECTION_ID!,
-      ID.unique(),
-      {
-        userId,
-        bankId,
-        accountId,
-        accessToken,
-        fundingSourceUrl,
-        shareableId,
-      }
-    );
-    return parseStringify(bankAccount);
-  } catch (error) {}
-};
-
 
 export const exchangePublicToken = async ({
   publicToken,
@@ -222,5 +192,36 @@ export const exchangePublicToken = async ({
     });
   } catch (error) {
     console.error("An error occurred while creating exchanging token:", error);
+  }
+};
+
+// CREATE BANK ACCOUNT
+export const createBankAccount = async ({
+  userId,
+  bankId,
+  accountId,
+  accessToken,
+  fundingSourceUrl,
+  shareableId,
+}: createBankAccountProps) => {
+  try {
+    const { database } = await createAdminClient();
+
+    const bankAccount = await database.createDocument(
+      DATABASE_ID!,
+      BANK_COLLECTION_ID!,
+      ID.unique(),
+      {
+        userId,
+        bankId,
+        accountId,
+        accessToken,
+        fundingSourceUrl,
+        shareableId,
+      }
+    );
+    return parseStringify(bankAccount);
+  } catch (error) {
+    console.error("An error occurred while creating a bank account:", error);
   }
 };
