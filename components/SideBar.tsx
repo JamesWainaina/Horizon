@@ -6,8 +6,9 @@ import Image from 'next/image'
 import { sidebarLinks } from '@/constants'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
-import { Key } from 'lucide-react'
 import Footer from './Footer'
+import PlaidLink from './PlaidLink'
+
 
 
 
@@ -55,7 +56,8 @@ const SideBar = ({ user} : SiderbarProps) => {
                       </Link>
                     );
                 })}
-                USER
+                
+                <PlaidLink user= {user} />
             </nav>
 
           <Footer user= {user}/>
