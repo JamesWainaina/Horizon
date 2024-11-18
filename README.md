@@ -29,11 +29,11 @@ To get started with the **Horizon** project:
 2. **Cd into the project**;
 3. **Install dependencies**;
 npm run dev
-# or
+ or
 yarn dev
-# or
+or
 pnpm dev
-# or
+or
 bun dev
 
 
