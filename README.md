@@ -1,6 +1,6 @@
 # Horizon
 
-
+![Horizon Screenshot](./public/icons/screenshot.png)
 
 
 Horizon is a modern web application built with [Next.js](https://nextjs.org/), designed to provide a seamless user experience with high performance and scalability in mind. This project leverages Next.js features like server-side rendering (SSR), static site generation (SSG), and API routes to create a robust web platform.
@@ -28,13 +28,13 @@ To get started with the **Horizon** project:
    git clone https://github.com/your-username/horizon.git
 2. **Cd into the project**;
 3. **Install dependencies**;
-npm run dev
+npm run dev,  
  or
-yarn dev
+  yarn dev
 or
-pnpm dev
+ ppm dev
 or
-bun dev
+ bun dev
 
 
 
