@@ -2,6 +2,9 @@
 
 ![Horizon Screenshot](./public/icons/screenshot.png)
 
+## example user credentials to login
+email: mayers@gmail.com, password: 123456789
+
 
 Horizon is a modern web application built with [Next.js](https://nextjs.org/), designed to provide a seamless user experience with high performance and scalability in mind. This project leverages Next.js features like server-side rendering (SSR), static site generation (SSG), and API routes to create a robust web platform.
 
