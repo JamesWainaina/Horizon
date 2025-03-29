@@ -29,7 +29,7 @@ To get started with the **Horizon** project:
 
    ```bash
    git clone https://github.com/your-username/horizon.git
-2. **Cd into the project**;
+2. **cd  into the project**;
 3. **Install dependencies**;
 npm run dev,  
  or
