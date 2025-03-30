@@ -28,7 +28,8 @@ To get started with the **Horizon** project:
 1. **Clone the project**:
 
    ```bash
-   git clone https://github.com/your-username/horizon.git
+ https://github.com/JamesWainaina/Horizon.git
+ 
 2. **cd  into the project**;
 3. **Install dependencies**;
 npm run dev,  
